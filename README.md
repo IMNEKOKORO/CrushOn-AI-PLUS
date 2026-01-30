@@ -1,4 +1,7 @@
 # CrushOn PLUS
+<p align="center">
+  <img src="https://i.imgur.com/010bH37.jpeg" alt="CrushOn PLUS Banner">
+</p>
 
 UserScript for Tampermonkey that improves UI and immersion in CrushOn AI.
 
