@@ -6,7 +6,7 @@
 # CrushOn PLUS
 
 **Want more immersion in CrushOn?**  
-CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more *alive*.
+CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more **alive**.
 
 <p align="center">
   <img 
@@ -16,9 +16,7 @@ CrushOn PLUS gives you simple tools like ambient music and sound effects to make
   >
 </p>
 
-**CrushOn PLUS Preview**
-
-✨ Now you’ll have your own personalized bar to make your experience more interactive and immersive.
+⚪ ¡Now you’ll have your own personalized bar to make your experience more interactive and immersive!
 
 ## Installation
 1. Install Tampermonkey: https://www.tampermonkey.net
@@ -87,6 +85,7 @@ And if possible, consider supporting me on my Ko-fi page — any support is grea
 If this project receives enough support, I plan to bring more content and improvements in the future.
 If you find any **bugs** or have **suggestions**, feel free to share them, The project is in beta so it probably has many bugs.
 
+Example character used for the video was created by: @DarkLight16
 
 Want to contact me? You can reach me via email at ImNekokoro@outlook.com
 
@@ -100,7 +99,7 @@ If you want me not to starve and want more updates, please don't forget to suppo
 
 👉 https://ko-fi.com/imnekokoro
 
-Thank you for your support !RAWR❤️! 
+Thank you for your support **!RAWR❤️!**
 
 ##
 **MODIFICATION OR SALE WITHOUT AUTHORIZATION IS PROHIBITED.**
