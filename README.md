@@ -63,7 +63,7 @@ Assign animated emojis (Rain, Vortex, etc.) and screen effects (Flash, Shake, Bl
 
 🔗 **AUDIO LINKS GUIDE**  
 • **YouTube:** Paste only the end of the link starting from `v=` Example: `v=DZJpqqkSce0`.<br>
-• **Dropbox:** Replace `www.dropbox.com` with `dl.dropboxusercontent.com` to enable direct audio playback.
+• **Dropbox:** Replace `www.dropbox.com` with `dl.dropboxusercontent.com` to enable direct audio playback.<br>
 • **Direct link:** To use any audio, the **URL** has to end with `.mp3`<br>
 
 
