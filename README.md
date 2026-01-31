@@ -15,6 +15,9 @@ CrushOn PLUS gives you simple tools like ambient music and sound effects to make
     width="700"
   >
 </p>
+<p align="center">
+  <sub>Example character: Filia – Popular Pick-Me Girl · By @DarkLight16</sub>
+</p>
 
 ⚪ ¡Now you’ll have your own personalized bar to make your experience more interactive and immersive!
 
@@ -84,8 +87,6 @@ And if possible, consider supporting me on my Ko-fi page — any support is grea
 
 If this project receives enough support, I plan to bring more content and improvements in the future.
 If you find any **bugs** or have **suggestions**, feel free to share them, The project is in beta so it probably has many bugs.
-
-Example character used for the video was created by: @DarkLight16
 
 Want to contact me? You can reach me via email at ImNekokoro@outlook.com
 
