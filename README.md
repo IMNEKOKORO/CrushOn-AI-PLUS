@@ -23,7 +23,7 @@
 1. Install Tampermonkey: https://www.tampermonkey.net
 2. Open:
    https://raw.githubusercontent.com/IMNEKOKORO/CrushOn-AI-PLUS/main/crushon-ai-plus.user.js
-3. Click Install
+3. Click to Install
 
 ## Features
 
