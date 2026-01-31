@@ -64,7 +64,9 @@ several custom themes so you can use the one you like the most (this option is a
  **BACKUP**  
 Use **Export** to download your `.json` configuration and **Import** to restore it or share it with others.
 
-
+##Do you want to use this script not only for personal use, but also in public projects? ¡No problem! You are free to use it.
+Just **please** remember to give proper credit to the author, @IMNEKOKORO.
+And if possible, consider supporting me on my Ko-fi page — any support is greatly appreciated.
 
 ## ☕ Support the project
 
