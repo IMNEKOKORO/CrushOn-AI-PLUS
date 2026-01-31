@@ -1,4 +1,4 @@
-# CrushOn PLUS
+# CrushOn PLUS **+**
 <p align="center">
   <img src="https://i.imgur.com/010bH37.jpeg" alt="CrushOn PLUS Banner">
 </p>
