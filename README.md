@@ -6,6 +6,7 @@
 # CrushOn PLUS
 
 **Want more immersion in CrushOn?**  
+
 CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more **alive**.
 
 <p align="center">
@@ -16,9 +17,8 @@ CrushOn PLUS gives you simple tools like ambient music and sound effects to make
   >
 </p>
 <p align="center">
-  <sub>Example character: Filia – Popular Pick-Me Girl · By @DarkLight16</sub>
+  <small>Example character: Filia – Popular Pick-Me Girl · By @DarkLight16</small>
 </p>
-
 ⚪ ¡Now you’ll have your own personalized bar to make your experience more interactive and immersive!
 
 ## Installation
