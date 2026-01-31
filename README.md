@@ -5,7 +5,7 @@
 
 Want more immersion in CrushOn? CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more ¡alive!,
 
-![Preview](https://i.imgur.com/yyyKlkk.gif)
+![CrushOnPLUSGIF-ezgif com-optimize](https://github.com/user-attachments/assets/f9ddf955-24af-42ab-9bf3-a7e96ba8d9fd)
 
 ¡Now you will have your own personalized bar to make your dive more interactive!
 
@@ -74,7 +74,8 @@ Just **please** remember to give proper credit to the author, @IMNEKOKORO.
 And if possible, consider supporting me on my Ko-fi page — any support is greatly appreciated.
 
 If this project receives enough support, I plan to bring more content and improvements in the future.
-If you find any **bug**s or have **suggestions**, feel free to share them.
+If you find any **bugs** or have **suggestions**, feel free to share them, The project is in beta so it probably has many bugs.
+
 
 Want to contact me? You can reach me via email at ImNekokoro@outlook.com
 
