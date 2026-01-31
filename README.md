@@ -74,7 +74,9 @@ If you find any **bug**s or have **suggestions**, feel free to share them.
 
 Want to contact me? You can reach me via email at ImNekokoro@outlook.com
 
-or on Twitter (X): https://x.com/ImNekokoro
+or Twitter (X): https://x.com/ImNekokoro
+
+CrushOn Profile: https://crushon.ai/es/profile/a6ac8e1a-b936-46f3-a3ea-851c8052d6c6?shared=true
 
 ## ☕ Support the project
 
