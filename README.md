@@ -70,7 +70,7 @@ Just **please** remember to give proper credit to the author, @IMNEKOKORO.
 And if possible, consider supporting me on my Ko-fi page — any support is greatly appreciated.
 
 If this project receives enough support, I plan to bring more content and improvements in the future.
-If you find any bugs or have suggestions, feel free to share them.
+If you find any **bug**s or have **suggestions**, feel free to share them.
 
 Want to contact me? You can reach me via email at ImNekokoro@outlook.com
 
