@@ -83,7 +83,6 @@
         @keyframes bounceIn { 0% { transform: translate(-50%, -100vh); } 60% { transform: translate(-50%, -40%); } 80% { transform: translate(-50%, -60%); } 100% { transform: translate(-50%, -50%); opacity:0; } }
         .anim-bounce { top: 50%; left: 50%; animation: bounceIn 1.5s ease-out forwards; }
 
-        /* SCREEN EFFECTS ANIMATIONS */
         @keyframes ghostFlash { 0%, 100% { opacity: 0; } 50% { opacity: 0.5; background: #fff; } }
         .effect-ghost { animation: ghostFlash 0.2s 3; }
         @keyframes glitchAnim { 0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.5deg); } 50% { clip: rect(12px, 9999px, 90px, 0); transform: skew(0.2deg); background: rgba(255,0,0,0.1); } 100% { clip: rect(67px, 9999px, 100px, 0); transform: skew(0.8deg); } }
@@ -149,7 +148,31 @@
     modalGuia.style.width = "480px"; modalGuia.style.maxHeight = "85vh";
     const guiaContent = document.createElement('div');
     guiaContent.style = "font-size:13px; line-height:1.5; max-height:400px; overflow-y:auto; padding-right:10px; color:#ddd;";
-    guiaContent.innerHTML = `<div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);"><b>🎵 AUTOMATIC SCENES:</b><br>The music changes based on scene cards or keywords.</div><div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);"><b>🔊 SFX:</b><br>Short sounds triggered by keywords.</div>`;
+    guiaContent.innerHTML = `
+        <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
+            <b>🎵 AUTOMATIC SCENES:</b><br>
+            The music changes automatically based on the scene card. The name you give to the scene card must be placed in the "Keyword".
+        </div>
+        <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
+            <b>🔊 SOUND EFFECTS (SFX):</b><br>
+            Configure short sounds for actions. They will play when the "Keyword" is mentioned by {{user}} or {{char}}.
+        </div>
+        <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
+            <b>✨ VISUALS AND FILTERS:</b><br>
+            Assign animated emojis (Rain, Vortex, etc.) and screen effects (Flash, Shake, Blood, etc.) when the "Keyword" is mentioned.
+        </div>
+        <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
+            <b>🔗 AUDIO LINKS GUIDE:</b><br>
+            • <b>YouTube:</b> Paste the end of the link starting from v= (e.g., v=DZJpqqkSce0).<br>
+            • <b>Dropbox:</b> Change <code>www.dropbox.com</code> to <code>dl.dropboxusercontent.com</code> for direct audio.
+        </div>
+        <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
+            <b>🎲🟡 DICE AND COIN:</b><br>Useful for RPG roles or quick decisions.
+        </div>
+        <div class="guia-section" style="margin-bottom:5px; padding:10px; background:rgba(255,255,255,0.05);">
+            <b>📤 BACKUP:</b><br>Use "Export" to download your .json configuration and "Import" to restore it or share it.
+        </div>
+    `;
     const closeGuia = document.createElement('button'); closeGuia.innerText = "GOT IT"; closeGuia.className = "dynamic-modal-btn"; closeGuia.style = "margin-top:15px; padding:12px; cursor:pointer; width:100%; font-weight:bold; border-radius:8px;";
     closeGuia.onclick = () => modalGuia.style.display = "none"; modalGuia.append(guiaContent, closeGuia);
 
@@ -228,7 +251,6 @@
     const ve = document.createElement('input'); ve.placeholder = "Emoji..."; ve.className = "dynamic-modal-btn"; ve.style = inputStyle;
     const va = document.createElement('select'); va.innerHTML = `<option value="pop">Pop</option><option value="rain">Rain</option><option value="explode">Explosion</option><option value="vortex">Vortex</option><option value="bounce">Bounce</option>`; va.className = "dynamic-modal-btn"; va.style = inputStyle;
 
-    // OPCIONES DE EFECTOS DE PANTALLA AMPLIADAS
     const vs = document.createElement('select');
     vs.innerHTML = `
         <option value="none">No Screen Effect</option>
@@ -312,7 +334,6 @@
                     if (v.anim === 'rain') { for(let i=0; i<15; i++) { const d = document.createElement('div'); d.innerText = v.emoji; d.className = 'v-emoji anim-rain'; d.style.left = Math.random() * 100 + "vw"; d.style.top = -50 + "px"; d.style.animationDelay = (Math.random() * 1.5) + "s"; document.body.appendChild(d); setTimeout(() => d.remove(), 4000); }
                     } else { const el = document.createElement('div'); el.innerText = v.emoji; el.className = `v-emoji anim-${v.anim}`; el.style.left = "50%"; document.body.appendChild(el); setTimeout(()=>el.remove(), 2500); }
 
-                    // EJECUCIÓN DE SCREEN EFFECTS
                     if(v.screen === 'flash') { overlay.style.boxShadow = `inset 0 0 100px 50px rgba(255,255,255,0.6)`; setTimeout(()=>overlay.style.boxShadow="none", 1000); }
                     if(v.screen === 'blood') { overlay.style.boxShadow = `inset 0 0 100px 60px rgba(180,0,0,0.7)`; setTimeout(()=>overlay.style.boxShadow="none", 1200); }
                     if(v.screen === 'shake') { document.body.classList.add('shake-active'); setTimeout(()=>document.body.classList.remove('shake-active'), 400); }
