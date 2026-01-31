@@ -28,7 +28,7 @@ UserScript for Tampermonkey that improves UI and immersion in CrushOn AI.
 - 📤 **Backup & Sharing**  
   Export your configuration as a `.json` file and import it later to restore or share your setup.
 
-  ## 📖 User Guide
+## 📖 User Guide
 
  **AUTOMATIC SCENES**  
 Music changes automatically based on the scene card.  
