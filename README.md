@@ -3,7 +3,10 @@
   <img src="https://i.imgur.com/010bH37.jpeg" alt="CrushOn PLUS Banner">
 </p>
 
-Want more immersion in CrushOn? CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more **¡Alive!**
+# CrushOn PLUS
+
+**Want more immersion in CrushOn?**  
+CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more *alive*.
 
 <p align="center">
   <img 
@@ -13,7 +16,9 @@ Want more immersion in CrushOn? CrushOn PLUS gives you simple tools like ambient
   >
 </p>
 
-¡Now you will have your own personalized bar to make your dive more interactive!
+**CrushOn PLUS Preview**
+
+✨ Now you’ll have your own personalized bar to make your experience more interactive and immersive.
 
 ## Installation
 1. Install Tampermonkey: https://www.tampermonkey.net
