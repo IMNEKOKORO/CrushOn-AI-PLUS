@@ -78,6 +78,8 @@ or Twitter (X): https://x.com/ImNekokoro
 
 CrushOn Profile: https://crushon.ai/es/profile/a6ac8e1a-b936-46f3-a3ea-851c8052d6c6?shared=true
 
+**MODIFICATION OR SALE WITHOUT AUTHORIZATION IS PROHIBITED.**
+
 ## ☕ Support the project
 
 If you want me not to starve and want more updates, please don't forget to support me
