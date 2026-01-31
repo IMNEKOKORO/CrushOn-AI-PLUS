@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         CrushOn AI PLUS
-// @namespace    https://github.com/IMNEKOKORO/crushon-plus
-// @version      1.0.1
-// @description  As its name indicates, more utilities and options for crushOn AI
+// @namespace    https://github.com/IMNEKOKORO/CrushOn-AI-PLUS
+// @version      1.0.2
+// @description  More immersion tools for CrushOn AI
 // @author       IMNEKOKORO
 // @match        https://crushon.ai/*
 // @icon         https://i.imgur.com/FFZr6Jc.png
+// @updateURL    https://raw.githubusercontent.com/IMNEKOKORO/CrushOn-AI-PLUS/main/crushon-ai-plus.user.js
+// @downloadURL  https://raw.githubusercontent.com/IMNEKOKORO/CrushOn-AI-PLUS/main/crushon-ai-plus.user.js
 // @grant        none
 // ==/UserScript==
 
@@ -15,11 +17,12 @@
     const professionalText = "CRUSHON AI PLUS ACTIVE | IF YOU ENJOY THIS SCRIPT AND WANT TO SUPPOR ME: ☕ https://ko-fi.com/imnekokoro ☕ | MODIFICATION OR SALE WITHOUT AUTHORIZATION IS PROHIBITED.";
 
     const Temas = {
-        cyber:  { neon: "#ff4d94", wine: "#4a1030", border: "#721c47", dark: "#0a0105" },
+        crimson: { neon: "#ff0000", wine: "#4d0000", border: "#800000", dark: "#0f0000" },
         ocean:  { neon: "#00d4ff", wine: "#051937", border: "#004a7c", dark: "#020a1a" },
         forest: { neon: "#39ff14", wine: "#0b2b0b", border: "#145214", dark: "#041204" },
         gold:   { neon: "#ffcc00", wine: "#332200", border: "#664400", dark: "#1a1100" },
-        grape:  { neon: "#bc13fe", wine: "#2e003e", border: "#5d007e", dark: "#14001b" }
+        grape:  { neon: "#bc13fe", wine: "#2e003e", border: "#5d007e", dark: "#14001b" },
+        candy:  { neon: "#ff007f", wine: "#4d0026", border: "#99004d", dark: "#1a000d" }
     };
 
     const styleTemas = document.createElement('style');
@@ -65,9 +68,11 @@
     let bibliotecaSonidos = JSON.parse(localStorage.getItem('rol_sounds')) || [];
     let efectosVisuales = JSON.parse(localStorage.getItem('rol_visuals')) || [];
     let bibliotecaEscenas = JSON.parse(localStorage.getItem('rol_escenas')) || [];
+    let masterVolume = parseFloat(localStorage.getItem('rol_volume')) || 0.5;
+    let sfxVolume = localStorage.getItem('rol_sfx_volume') || 0.5;
 
     const ytContainer = document.createElement('div'); document.body.appendChild(ytContainer);
-    const audioPlayer = document.createElement('audio'); audioPlayer.loop = true; document.body.appendChild(audioPlayer);
+    const audioPlayer = document.createElement('audio'); audioPlayer.loop = true; audioPlayer.volume = masterVolume; document.body.appendChild(audioPlayer);
 
     const style = document.createElement('style');
     style.innerHTML = `
@@ -165,6 +170,7 @@
             <b>🔗 AUDIO LINKS GUIDE:</b><br>
             • <b>YouTube:</b> Paste the end of the link starting from v= (e.g., v=DZJpqqkSce0).<br>
             • <b>Dropbox:</b> Change <code>www.dropbox.com</code> to <code>dl.dropboxusercontent.com</code> for direct audio.
+            • <b>Direct link:</b> To use any audio, the **URL** has to end with .mp3
         </div>
         <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
             <b>🎲🟡 DICE AND COIN:</b><br>Useful for RPG roles or quick decisions.
@@ -173,9 +179,9 @@
             <b>📝 NOTEBOOK:</b><br>
             Use the notepad to write down important things, such as keywords or lore details.
         </div>
-           <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
-           <b>🎨 THEMES:</b><br>
-           Themes for your CrushOn Plus interface, ¡You can use the one you like the most!.
+            <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
+            <b>🎨 THEMES:</b><br>
+            Themes for your CrushOn Plus interface, ¡You can use the one you like the most!.
         </div>
         <div class="guia-section" style="margin-bottom:5px; padding:10px; background:rgba(255,255,255,0.05);">
             <b>📤 BACKUP:</b><br>Use "Export" to download your .json configuration and "Import" to restore it or share it.
@@ -189,7 +195,7 @@
 
     Object.keys(Temas).forEach(key => {
         const btnT = document.createElement('div'); btnT.className = "swatch"; btnT.style.background = Temas[key].wine; btnT.style.color = Temas[key].neon; btnT.innerText = key.toUpperCase();
-        btnT.onclick = () => { aplicarTema(key); modalTemas.style.display = "none"; }; modalTemas.appendChild(btnT);
+        btnT.onclick = () => { aplicarTema(key); }; modalTemas.appendChild(btnT);
     });
     const closeT = document.createElement('button'); closeT.innerText = "CLOSE"; closeT.style = "margin-top:10px; cursor:pointer; background:transparent; color:gray; border:none;";
     closeT.onclick = () => modalTemas.style.display = "none"; modalTemas.appendChild(closeT);
@@ -229,6 +235,16 @@
     const eList = document.createElement('div'); eList.style = "margin-top:10px; max-height:100px; overflow-y:auto;";
     const ek = document.createElement('input'); ek.placeholder = "Scene Name..."; ek.className = "dynamic-modal-btn"; ek.style = inputStyle;
     const eu = document.createElement('input'); eu.placeholder = "Music Link/ID..."; eu.className = "dynamic-modal-btn"; eu.style = inputStyle;
+
+    const volLabel = document.createElement('div'); volLabel.style = "font-size:12px; margin-top:10px; font-weight:bold;"; volLabel.innerText = "MUSIC VOLUME";
+    const volInput = document.createElement('input'); volInput.type = "range"; volInput.min = "0"; volInput.max = "1"; volInput.step = "0.05"; volInput.value = masterVolume; volInput.style = "width:100%; margin-bottom:10px; cursor:pointer;";
+    volInput.oninput = () => {
+        masterVolume = parseFloat(volInput.value); localStorage.setItem('rol_volume', masterVolume);
+        audioPlayer.volume = masterVolume;
+        const iframe = ytContainer.querySelector('iframe');
+        if (iframe) { iframe.contentWindow.postMessage(JSON.stringify({event: 'command', func: 'setVolume', args: [Math.floor(masterVolume * 100)]}), '*'); }
+    };
+
     const eadd = document.createElement('button'); eadd.innerText = "ADD SCENE"; eadd.className = "dynamic-modal-btn"; eadd.style = inputStyle;
     eadd.onclick = () => { if(ek.value && eu.value) {
         let finalUrl = eu.value;
@@ -236,13 +252,18 @@
         bibliotecaEscenas.push({key: ek.value.toLowerCase(), url: finalUrl});
         localStorage.setItem('rol_escenas', JSON.stringify(bibliotecaEscenas)); ek.value=""; eu.value=""; renderList(eList, bibliotecaEscenas, 'rol_escenas', 'e');
     }};
-    modalEscenas.append(ek, eu, eadd, eList);
+    modalEscenas.append(ek, eu, eadd, volLabel, volInput, eList);
     const ec = document.createElement('button'); ec.innerText = "CLOSE"; ec.style="color:#888; background:transparent; border:none; margin-top:5px; cursor:pointer; width:100%;";
     ec.onclick = () => modalEscenas.style.display = "none"; modalEscenas.appendChild(ec);
 
     const sList = document.createElement('div'); sList.style = "margin-top:10px; max-height:100px; overflow-y:auto;";
     const sk = document.createElement('input'); sk.placeholder = "Keyword..."; sk.className = "dynamic-modal-btn"; sk.style = inputStyle;
     const su = document.createElement('input'); su.placeholder = "Sound Link..."; su.className = "dynamic-modal-btn"; su.style = inputStyle;
+
+    const sfxVolLabel = document.createElement('div'); sfxVolLabel.style = "font-size:12px; margin-top:10px; font-weight:bold;"; sfxVolLabel.innerText = "SFX VOLUME";
+    const sfxVolInput = document.createElement('input'); sfxVolInput.type = "range"; sfxVolInput.min = "0"; sfxVolInput.max = "1"; sfxVolInput.step = "0.05"; sfxVolInput.value = sfxVolume; sfxVolInput.style = "width:100%; margin-bottom:10px; cursor:pointer;";
+    sfxVolInput.oninput = () => { sfxVolume = sfxVolInput.value; localStorage.setItem('rol_sfx_volume', sfxVolume); };
+
     const sadd = document.createElement('button'); sadd.innerText = "ADD SOUND"; sadd.className = "dynamic-modal-btn"; sadd.style = inputStyle;
     sadd.onclick = () => { if(sk.value && su.value) {
         let finalUrl = su.value;
@@ -250,7 +271,7 @@
         bibliotecaSonidos.push({key: sk.value.toLowerCase(), url: finalUrl});
         localStorage.setItem('rol_sounds', JSON.stringify(bibliotecaSonidos)); sk.value=""; su.value=""; renderList(sList, bibliotecaSonidos, 'rol_sounds', 's');
     }};
-    modalSounds.append(sk, su, sadd, sList);
+    modalSounds.append(sk, su, sadd, sfxVolLabel, sfxVolInput, sList);
     const sc = document.createElement('button'); sc.innerText = "CLOSE"; sc.style="color:#888; background:transparent; border:none; margin-top:5px; cursor:pointer; width:100%;";
     sc.onclick = () => modalSounds.style.display = "none"; modalSounds.appendChild(sc);
 
@@ -308,10 +329,12 @@
         musicBtn.querySelector('.btn-icon').classList.remove('music-playing');
         ytContainer.innerHTML = ""; audioPlayer.pause(); audioPlayer.src = ""; actualUrl = escena.url;
         setTimeout(() => {
-            if (escena.url.includes("dropboxusercontent.com") || escena.url.includes(".mp3")) { audioPlayer.src = escena.url; audioPlayer.play().catch(() => {}); }
+            const vVal = Math.floor(masterVolume * 100);
+            if (escena.url.includes("dropboxusercontent.com") || escena.url.includes(".mp3")) { audioPlayer.src = escena.url; audioPlayer.volume = masterVolume; audioPlayer.play().catch(() => {}); }
             else {
                 let id = escena.url; if(id.includes("v=")) id = id.split("v=")[1].split("&")[0]; else if(id.includes("youtu.be/")) id = id.split("youtu.be/")[1];
-                ytContainer.innerHTML = `<iframe width="1" height="1" src="https://www.youtube.com/embed/${id}?autoplay=1&loop=1&playlist=${id}" frameborder="0" allow="autoplay"></iframe>`;
+                ytContainer.innerHTML = `<iframe width="1" height="1" src="https://www.youtube.com/embed/${id}?autoplay=1&loop=1&playlist=${id}&enablejsapi=1&volume=0" frameborder="0" allow="autoplay"></iframe>`;
+                setTimeout(() => { const i = ytContainer.querySelector('iframe'); if(i) i.contentWindow.postMessage(JSON.stringify({event: 'command', func: 'setVolume', args: [vVal]}), '*'); }, 1000);
             } musicBtn.querySelector('.btn-icon').classList.add('music-playing');
         }, 600);
     }
@@ -335,7 +358,16 @@
 
     function triggerSfx(text) {
         const lt = text.toLowerCase();
-        if(sonidosActivos) { bibliotecaSonidos.forEach(s => { if(lt.includes(s.key.toLowerCase()) && (Date.now() - ultimotimeout > 3000)) { ultimotimeout = Date.now(); new Audio(s.url).play().catch(()=>{}); } }); }
+        if(sonidosActivos) {
+            bibliotecaSonidos.forEach(s => {
+                if(lt.includes(s.key.toLowerCase()) && (Date.now() - ultimotimeout > 3000)) {
+                    ultimotimeout = Date.now();
+                    const sfx = new Audio(s.url);
+                    sfx.volume = sfxVolume;
+                    sfx.play().catch(()=>{});
+                }
+            });
+        }
         if(visualesActivos) {
             efectosVisuales.forEach(v => {
                 if(lt.includes(v.key.toLowerCase())) {
@@ -369,5 +401,5 @@
     }
     setupHover(musicBtn, musicGear); setupHover(soundBtn, soundGear); setupHover(visualBtn, visualGear);
 
-    const savedT = localStorage.getItem('rol_theme_save'); aplicarTema(savedT || 'cyber');
+    const savedT = localStorage.getItem('rol_theme_save'); aplicarTema(savedT === 'cyber' ? 'crimson' : (savedT || 'crimson'));
 })();
