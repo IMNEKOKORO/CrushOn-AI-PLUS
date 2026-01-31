@@ -5,9 +5,7 @@
 
 Want more immersion in CrushOn? CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more ¡alive!,
 
-<p align="center">
-  <img src="https://i.imgur.com/yyyKlkk.gif" alt="CrushOn PLUS Preview">
-</p>
+![Preview](https://github.com/IMNEKOKORO/REPO_NAME/assets/XXXX/XXXX.gif)
 
 ¡Now you will have your own personalized bar to make your dive more interactive!
 
