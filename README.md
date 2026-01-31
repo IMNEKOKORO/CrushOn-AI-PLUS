@@ -3,7 +3,7 @@
   <img src="https://i.imgur.com/010bH37.jpeg" alt="CrushOn PLUS Banner">
 </p>
 
-UserScript for Tampermonkey that improves UI and immersion in CrushOn AI.
+Want more immersion in CrushOn? CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more ¡alive!, ¡Now you will have your own personalized bar to make your dive more interactive!
 
 ## Installation
 1. Install Tampermonkey: https://www.tampermonkey.net
@@ -24,6 +24,12 @@ UserScript for Tampermonkey that improves UI and immersion in CrushOn AI.
 
 - 🎲 **Dice & Coin System**  
   Roll dice or flip a coin instantly — perfect for RPG mechanics and quick decisions.
+
+- 📝 **Notebook**  
+  Use the notepad to write down important things, such as keywords or lore details.
+
+- 🎨 **Themes**  
+  Themes for your CrushOn Plus interface, ¡You can use the one you like the most!.
 
 - 📤 **Backup & Sharing**  
   Export your configuration as a `.json` file and import it later to restore or share your setup.
@@ -49,6 +55,12 @@ Assign animated emojis (Rain, Vortex, etc.) and screen effects (Flash, Shake, Bl
  **DICE AND COIN**  
 Useful for RPG roles or quick decisions.
 
+ **NOTEBOOK**  
+You can use the notebook to write important things like "keywords" that the character needs or things you don't want to forget, practically whatever you want.
+
+ **THEMES**  
+several custom themes so you can use the one you like the most (this option is a beta, if the project has a lot of support, in the future it will have more customization such as modifying the colors of the page)
+ 
  **BACKUP**  
 Use **Export** to download your `.json` configuration and **Import** to restore it or share it with others.
 
