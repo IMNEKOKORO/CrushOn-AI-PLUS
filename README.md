@@ -15,10 +15,10 @@ CrushOn PLUS gives you simple tools like ambient music and sound effects to make
     alt="CrushOn PLUS Preview"
     width="700"
   >
-</p>
 <p align="center">
-  <small>Example character: Filia – Popular Pick-Me Girl · By @DarkLight16</small>
+  <sub>Example character: Filia – Popular Pick-Me Girl · By @DarkLight16</sub>
 </p>
+
 ⚪ ¡Now you’ll have your own personalized bar to make your experience more interactive and immersive!
 
 ## Installation
