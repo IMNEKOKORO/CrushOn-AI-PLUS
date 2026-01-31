@@ -83,6 +83,8 @@ Do you want to use this script not only for personal use, but also in public pro
 Just **please** remember to give proper credit to the author, @IMNEKOKORO.
 And if possible, consider supporting me on my Ko-fi page — any support is greatly appreciated.
 
+This application was created for PC.
+
 If this project receives enough support, I plan to bring more content and improvements in the future.
 If you find any **bugs** or have **suggestions**, feel free to share them, The project is in beta so it probably has many bugs.
 
