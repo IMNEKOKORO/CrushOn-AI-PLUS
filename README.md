@@ -64,8 +64,9 @@ Assign animated emojis (Rain, Vortex, etc.) and screen effects (Flash, Shake, Bl
 🔗 **AUDIO LINKS GUIDE**  
 • **YouTube:** Paste only the end of the link starting from `v=`  
   Example: `v=DZJpqqkSce0`  
-• **Dropbox:** Replace `www.dropbox.com` with `dl.dropboxusercontent.com` to enable direct audio playback.
-• **Direct link:** to use any audio, the **url** has to end with `.mp3` a page I recommend is `https://www.myinstants.com` search for the audio you want, press download MP3 and copy the link
+• **Dropbox:** Replace `www.dropbox.com` with `dl.dropboxusercontent.com` to enable direct audio playback.<br>
+• **Direct link:** To use any audio, the **URL** has to end with `.mp3`
+
 
  **DICE AND COIN**  
 Useful for RPG roles or quick decisions.
