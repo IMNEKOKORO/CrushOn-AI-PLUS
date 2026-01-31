@@ -6,7 +6,7 @@
 UserScript for Tampermonkey that improves UI and immersion in CrushOn AI.
 
 ## Installation
-1. Install Tampermonkey https://www.tampermonkey.net
+1. Install Tampermonkey: https://www.tampermonkey.net
 2. Open:
    https://raw.githubusercontent.com/IMNEKOKORO/crushon-plus/main/crushon-plus.user.js
 3. Click Install
