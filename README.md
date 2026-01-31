@@ -62,7 +62,7 @@ They will play when the **Keyword** is mentioned by **{{user}}** or **{{char}}**
 Assign animated emojis (Rain, Vortex, etc.) and screen effects (Flash, Shake, Blood, etc.) that activate when the **Keyword** appears in the conversation.
 
 🔗 **AUDIO LINKS GUIDE**  
-• **YouTube:** Paste only the end of the link starting from `v=` Example: `v=DZJpqqkSce0`.<br>  
+• **YouTube:** Paste only the end of the link starting from `v=` Example: `v=DZJpqqkSce0`.
 • **Dropbox:** Replace `www.dropbox.com` with `dl.dropboxusercontent.com` to enable direct audio playback.<br>
 • **Direct link:** To use any audio, the **URL** has to end with `.mp3`
 
