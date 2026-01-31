@@ -3,8 +3,6 @@
   <img src="https://i.imgur.com/010bH37.jpeg" alt="CrushOn PLUS Banner">
 </p>
 
-# CrushOn PLUS
-
 **Want more immersion in CrushOn?**  
 
 ⚪ CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more **alive**.
