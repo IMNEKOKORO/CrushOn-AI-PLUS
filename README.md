@@ -20,7 +20,7 @@ UserScript for Tampermonkey that improves UI and immersion in CrushOn AI.
   Play short sound effects triggered by keywords written by **{{user}}** or **{{char}}**.
 
 - ✨ **Visual Effects & Screen Filters**  
-  Add animated emojis (Rain, Vortex, etc.) and screen effects (Flash, Shake, Blood, and more) that activate dynamically during the conversation.
+  Add animated emojis and screen effects that activate dynamically during the conversation.
 
 - 🎲 **Dice & Coin System**  
   Roll dice or flip a coin instantly — perfect for RPG mechanics and quick decisions.
