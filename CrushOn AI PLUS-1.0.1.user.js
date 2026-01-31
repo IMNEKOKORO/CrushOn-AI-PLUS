@@ -169,6 +169,14 @@
         <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
             <b>🎲🟡 DICE AND COIN:</b><br>Useful for RPG roles or quick decisions.
         </div>
+            <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
+            <b>📝 NOTEBOOK:</b><br>
+            Use the notepad to write down important things, such as keywords or lore details.
+        </div>
+           <div class="guia-section" style="margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05);">
+           <b>🎨 THEMES:</b><br>
+           Themes for your CrushOn Plus interface, ¡You can use the one you like the most!.
+        </div>
         <div class="guia-section" style="margin-bottom:5px; padding:10px; background:rgba(255,255,255,0.05);">
             <b>📤 BACKUP:</b><br>Use "Export" to download your .json configuration and "Import" to restore it or share it.
         </div>
@@ -291,7 +299,7 @@
 
     const notePanel = document.createElement('div');
     notePanel.style = `position:fixed; top:0; left:-320px; width:320px; height:100vh; background:#0f0208; border-right:2px solid #ff4d94; z-index:999999; transition:left 0.4s; padding:20px; display:flex; flex-direction:column;`;
-    notePanel.innerHTML = `<div style="font-weight:bold; margin-bottom:15px; text-align:center;">ROLEPLAY NOTES</div>`;
+    notePanel.innerHTML = `<div style="font-weight:bold; margin-bottom:15px; text-align:center;">NOTEBOOK</div>`;
     const txt = document.createElement('textarea'); txt.style="flex-grow:1; background:#1e0712; color:#ffb3d9; border:1px solid #4a1030; padding:10px; resize:none; outline:none;";
     txt.value = localStorage.getItem('rol_notes')||""; txt.oninput = () => localStorage.setItem('rol_notes', txt.value);
     notePanel.appendChild(txt); document.body.appendChild(notePanel);
@@ -348,8 +356,8 @@
     const observer = new MutationObserver((mutations) => {
         corregirEtiquetas(); clearTimeout(debounceMusic); debounceMusic = setTimeout(() => { escanearEscenaActual(); }, 1000);
         mutations.forEach(m => {
-            m.addedNodes.forEach(n => { if(n.nodeType === 1) { const t = n.innerText || ""; if(t && !t.includes("ROLEPLAY NOTES")) triggerSfx(t); } });
-            if (m.type === "characterData") { const t = m.target.textContent; if(t && !t.includes("ROLEPLAY NOTES")) triggerSfx(t); }
+            m.addedNodes.forEach(n => { if(n.nodeType === 1) { const t = n.innerText || ""; if(t && !t.includes("NOTEBOOK")) triggerSfx(t); } });
+            if (m.type === "characterData") { const t = m.target.textContent; if(t && !t.includes("NOTEBOOK")) triggerSfx(t); }
         });
     });
     observer.observe(document.body, {childList: true, subtree: true, characterData: true});
