@@ -28,6 +28,31 @@ UserScript for Tampermonkey that improves UI and immersion in CrushOn AI.
 - 📤 **Backup & Sharing**  
   Export your configuration as a `.json` file and import it later to restore or share your setup.
 
+  ## 📖 User Guide
+
+ **AUTOMATIC SCENES**  
+Music changes automatically based on the scene card.  
+The name you give to the scene card must be placed in the **Keyword** field.
+
+ **SOUND EFFECTS (SFX)**  
+Configure short sounds for actions.  
+They will play when the **Keyword** is mentioned by **{{user}}** or **{{char}}**.
+
+ **VISUALS AND FILTERS**  
+Assign animated emojis (Rain, Vortex, etc.) and screen effects (Flash, Shake, Blood, etc.) that activate when the **Keyword** appears in the conversation.
+
+🔗 **AUDIO LINKS GUIDE**  
+• **YouTube:** Paste only the end of the link starting from `v=`  
+  Example: `v=DZJpqqkSce0`  
+• **Dropbox:** Replace `www.dropbox.com` with `dl.dropboxusercontent.com` to enable direct audio playback.
+
+ **DICE AND COIN**  
+Useful for RPG roles or quick decisions.
+
+ **BACKUP**  
+Use **Export** to download your `.json` configuration and **Import** to restore it or share it with others.
+
+
 
 ## ☕ Support the project
 
