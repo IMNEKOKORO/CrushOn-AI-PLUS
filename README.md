@@ -72,4 +72,4 @@ If you want me not to starve and want more updates, please don't forget to suppo
 
 👉 https://ko-fi.com/imnekokoro
 
-Thank you for your support RAWR ❤️
+Thank you for your support !RAWR❤️! 
