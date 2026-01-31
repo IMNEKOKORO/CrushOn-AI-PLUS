@@ -7,7 +7,7 @@
 
 **Want more immersion in CrushOn?**  
 
-CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more **alive**.
+⚪ CrushOn PLUS gives you simple tools like ambient music and sound effects to make conversations feel more **alive**.
 
 <p align="center">
   <img 
